@@ -31,4 +31,4 @@ The app is not finished. I want to add some features from the original one of th
 3) Also I want to update the general styles.
 
 ### Production link
-See [url](https://guess-the-pokemon-game.netlify.app/)
+See [the app in your browser](https://guess-the-pokemon-game.netlify.app/)

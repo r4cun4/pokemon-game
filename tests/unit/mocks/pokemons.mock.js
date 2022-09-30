@@ -1,6 +1,6 @@
 export const mockPokemons = [
     { 
-        name: 'pikachu',
+        name: 'Pikachu',
          id: 5
     },
     { 
