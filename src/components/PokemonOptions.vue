@@ -7,6 +7,7 @@
           :key="pokemon.id"
           @click="$emit( 'selectedPokemon', pokemon.id )"
           @mouseover="speechNames"
+          @mouseleave="speechCancel"
         >
           {{ pokemon.name }}
         </li>
@@ -35,7 +36,7 @@ export default {
 
             if(e.target.matches('li:nth-child(1)')) {
                 msg.text = this.pokemons[0].name;
-                console.log(msg)
+                console.log(msg, window.speechSynthesis)
                 window.speechSynthesis.speak(msg);
             } else if(e.target.matches('li:nth-child(2)')) {
                 msg.text = this.pokemons[1].name;
@@ -50,6 +51,9 @@ export default {
                 console.log(msg)
                 window.speechSynthesis.speak(msg);
             }
+        },
+        speechCancel() {
+            window.speechSynthesis.cancel()
         }
     }
 }
